@@ -19,6 +19,7 @@ export default function LoginState() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    if (emailIsInvalid) return;
     console.log(enteredValues);
   }
 
@@ -31,7 +32,7 @@ export default function LoginState() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
+      <h2>Login State</h2>
 
       <div className="control-row">
         <div className="control no-margin">
